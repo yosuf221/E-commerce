@@ -5,9 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.product{
+  transition: all 5s;
+}
+
+.product:hover{
+  border: 2px solid grey;
+}
+
+.product .btn{
+  transition: transform 1s , opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.product:hover .btn{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+.pdet{
+  background-color: gainsboro;
 }

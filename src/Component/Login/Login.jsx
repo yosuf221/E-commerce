@@ -7,7 +7,9 @@ import { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
 
 
-export default function Login() {
+export default function Login({saveUser}) {
+
+
   const [isLoading,setIsLoading] = useState(false)
   const [errorMessage,setErrorMessage] = useState(null)
   let navigate = useNavigate()
@@ -26,6 +28,8 @@ export default function Login() {
       console.log(data);
       if(data.message == "success"){
         setIsLoading(false)
+        localStorage.setItem("userToken" , data.token)
+        saveUser()
         navigate("/")
       }
     }

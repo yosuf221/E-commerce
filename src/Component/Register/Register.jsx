@@ -53,7 +53,7 @@ export default function Register() {
     validationSchema: mySchema,
     onSubmit:(values)=>register(values)
   })
-
+console.log(formik);
 
   return (
     <>
@@ -93,7 +93,7 @@ export default function Register() {
           <input type="tel" name="phone" id="phone" className='form-control mb-3' value={formik.values.phone} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
           {formik.errors.phone && formik.touched.phone ? <div className="alert alert-danger">{formik.errors.phone}</div> : ""} 
 
-            {isLoading ?<button className='btn bg-success text-white'><i className='fa fa-spin fa-spinner'></i></button> :  <button className='btn bg-success text-white'>Register</button>}
+            {isLoading ?<button className='btn bg-success text-white'><i className='fa fa-spin fa-spinner'></i></button> :  <button disabled={!(formik.isValid && formik.dirty)} className='btn bg-success text-white'>Register</button>}
           
 
           </div>
