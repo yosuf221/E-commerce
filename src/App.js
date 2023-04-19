@@ -46,7 +46,7 @@ function App() {
   const routes = createBrowserRouter([
     {
       path: "", element: <Layout userData={userData} setUserData={setUserData} />, children: [
-        { index: true, element: <ProtectedRoutes><Register /></ProtectedRoutes> },
+        { index: true, element: <ProtectedRoutes><Home /></ProtectedRoutes> },
         { path: "home", element: <ProtectedRoutes><Home /></ProtectedRoutes> },
         { path: "login", element: <Login saveUser={saveUser} /> },
         { path: "register", element: <Register /> },
