@@ -11,7 +11,7 @@ export default function Layout({userData , setUserData}) {
 
   function logOut(){
     localStorage.removeItem("userToken")
-    
+    setUserData(null)
     navigate("/login")
   }
 
