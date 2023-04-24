@@ -58,7 +58,7 @@ function App() {
         { path: "product-details/:id", element: <ProtectedRoutes><ProductDetails /></ProtectedRoutes> },
 
 
-        { path: "*", element: <Register /> },
+        { path: "*", element: <NotFound /> },
 
 
 
