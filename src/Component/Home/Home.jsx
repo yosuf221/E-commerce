@@ -3,7 +3,6 @@ import styles from './Home.module.css'
 import FeatureProducts from '../FeatureProducts/FeatureProducts'
 import Categories from '../Categories/Categories'
 import {Helmet} from "react-helmet";
-import Products from '../Products/Products';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false)

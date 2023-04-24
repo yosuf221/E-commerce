@@ -50,7 +50,7 @@ export default function FeatureProducts() {
             <div className="product px-2 py-3">
               <Link to={'/product-details/'+product.id}>
               <img src={product.imageCover} className='w-100' alt="" />
-              <p className='t text-danger'>{product.category.name}</p>
+              <p className='t text-danger'>{product.subcategory.name}</p>
                   
               <h3 className='h6'>{product.title.split(" ").splice(0,2).join(" ")}</h3>
               <div className='d-flex justify-content-between'>
@@ -80,37 +80,6 @@ export default function FeatureProducts() {
 
 </div>
 }
-      {/* <div className="container py-5">
-        <div className="row">
-          {allProducts.map((product) => 
-          <div className="col-md-2" key={product.id}>
-            <div className="product px-2 py-3">
-              <Link to={'/product-details/'+product.id}>
-              <img src={product.imageCover} className='w-100' alt="" />
-              <p className='t text-danger'>{product.category.name}</p>
-                  
-              <h3 className='h6'>{product.title.split(" ").splice(0,2).join(" ")}</h3>
-              <div className='d-flex justify-content-between'>
-              <p>{product.price} EGP</p>
-              <div>
-                <i className='fa fa-star text-warning'></i>
-                {product.ratingsAverage}
-              </div>
-              </div>
-
-              </Link>
-
-
-
-              <button onClick={() => generateCart(product._id)} className='btn bg-success text-white w-100'>+Add</button>
-
-
-
-            </div>
-          </div>
-          )}
-        </div>
-      </div> */}
 
 
 
