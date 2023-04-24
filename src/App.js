@@ -21,6 +21,7 @@ import Checkout from './Component/Checkout/Checkout';
 import AllOrders from './Component/AllOrders/AllOrders';
 import { Provider } from 'react-redux';
 import store from './Redux/Store';
+import InverseProtectRoute from './Component/InverseProtectRoute/InverseProtectRoute';
 
 
 
@@ -48,8 +49,8 @@ function App() {
       path: "", element: <Layout userData={userData} setUserData={setUserData} />, children: [
         { index: true, element: <ProtectedRoutes><Home /></ProtectedRoutes> },
         { path: "home", element: <ProtectedRoutes><Home /></ProtectedRoutes> },
-        { path: "login", element: <Login saveUser={saveUser} /> },
-        { path: "register", element: <Register /> },
+        { path: "login", element: <InverseProtectRoute><Login saveUser={saveUser} /></InverseProtectRoute> },
+        { path: "register", element:<InverseProtectRoute><Register /></InverseProtectRoute>  },
         { path: "cart", element: <ProtectedRoutes><Cart /></ProtectedRoutes> },
         { path: "checkout", element: <ProtectedRoutes><Checkout /></ProtectedRoutes> },
         { path: "allorders", element: <ProtectedRoutes><AllOrders></AllOrders></ProtectedRoutes> },
@@ -57,7 +58,7 @@ function App() {
         { path: "product-details/:id", element: <ProtectedRoutes><ProductDetails /></ProtectedRoutes> },
 
 
-        { path: "*", element: <NotFound /> },
+        { path: "*", element: <Register /> },
 
 
 
