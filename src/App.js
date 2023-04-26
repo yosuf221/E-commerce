@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Component/Layout/Layout';
 import Login from './Component/Login/Login';
 import Register from './Component/Register/Register'
@@ -44,7 +44,7 @@ function App() {
 
 
 
-  const routes = createBrowserRouter([
+  const routes = createHashRouter([
     {
       path: "", element: <Layout userData={userData} setUserData={setUserData} />, children: [
         { index: true, element: <ProtectedRoutes><Home /></ProtectedRoutes> },
