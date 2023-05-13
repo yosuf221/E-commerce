@@ -10,7 +10,7 @@ export default function Categories() {
   const [categories , setCategories] = useState([])
 
   async function getcategories(){
-    let {data} = await axios.get('https://route-ecommerce.onrender.com/api/v1/categories')
+    let {data} = await axios.get('https://route-ecommerce-app.vercel.app/api/v1/categories')
     setCategories(data.data)
   }
 

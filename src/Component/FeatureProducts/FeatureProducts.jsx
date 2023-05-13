@@ -13,7 +13,7 @@ export default function FeatureProducts() {
   const [allProducts , setAllProducts] = useState([])
 
   async function getProducts(){
-    let {data} = await axios.get('https://route-ecommerce.onrender.com/api/v1/products')
+    let {data} = await axios.get('https://route-ecommerce-app.vercel.app/api/v1/products')
     setAllProducts(data.data)
   }
 
