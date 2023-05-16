@@ -36,7 +36,7 @@ export default function NavBar({ userData, logOut }) {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to='products'>Productsss</Link>
+                <Link className="nav-link" to='products'>Product</Link>
               </li>
               <li className="nav-item position-relative">
                 <Link className="nav-link" to='cart'>
