@@ -27,7 +27,7 @@ export default function Register() {
       console.log("btee5" , values);
       setIsLoading(true)
       setErrorMessage(null)
-      let {data} = await axios.post('https://route-ecommerce-app.vercel.app/api/v1/auth/signup',values).catch((err) => {
+      let {data} = await axios.post('https://ecommerce.routemisr.com/api/v1/auth/signup',values).catch((err) => {
         console.log(err);
       setIsLoading(false)
         setErrorMessage(err.response.data.errors.msg)
